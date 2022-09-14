@@ -1,0 +1,1248 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500,@600,@700&display=swap');
+
+* {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::selection {
+    color: #eee;
+    background-color: rgb(115, 72, 14);
+}
+
+a:focus {
+    outline: none;
+    color: rgba(222, 169, 99, 0.65);
+}
+html,body{
+    scroll-behavior: smooth;
+    transition: 2s;
+}
+body {
+    width: 100%;
+    background: #fff;
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgb(115, 72, 14);
+}
+
+/* Header section  */
+header {
+    width: 100%;
+    padding: 25px 10px;
+}
+
+header nav {
+    width: 70%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 3fr 2fr;
+    align-items: center;
+    text-align: center;
+}
+
+header nav a {
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+header nav a:hover {
+    color: rgb(115, 72, 14);
+}
+
+nav>a {
+    color: #333;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+nav .logo h1 {
+    text-transform: uppercase;
+    line-height: 1.2em;
+}
+nav .logo h1>div:first-child {
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: rgb(115, 72, 14);
+    font-size: 25px;
+}
+
+nav .logo h1>div:last-child {
+    font-weight: 400;
+    font-size: 25px;
+    font-family: serif;
+}
+
+nav .icons i {
+    color: #333;
+    font-size: 22px;
+    margin: 0 4px;
+    transition: 0.3s;
+}
+
+nav .icons i:hover {
+    color: rgb(115, 72, 14);
+}
+
+/* Main section  */
+main.info {
+    width: 80%;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 20px;
+    border-bottom: 2px solid #999;
+    padding-bottom: 8rem;
+}
+
+main.info .name {
+    grid-column: span 3;
+    text-align: center;
+    padding: 70px 0;
+}
+
+main.info .name h1 {
+    color: rgb(115, 72, 14);
+    font-family: serif;
+    font-weight: 500;
+    font-size: 4rem;
+}
+
+aside.edu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+
+}
+
+aside.edu div h3 {
+    color: #333;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+aside.edu div p {
+    color: rgb(115, 72, 14);
+    line-height: 1.4rem;
+}
+
+aside.edu div a {
+    text-decoration: none;
+    color: rgb(115, 72, 14);
+}
+
+aside.edu div li {
+    list-style: none;
+}
+
+.center {
+    padding: 20px;
+    border: 1px solid rgb(115, 72, 14);
+    border-radius: 250px;
+}
+
+.center img {
+    border-radius: 250px;
+}
+
+aside.data {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-end;
+}
+
+aside.data div h3 {
+    color: #333;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+aside.data div h1 {
+    text-align: right;
+    font-size: 3rem;
+    color: rgb(115, 72, 14);
+    font-family: serif;
+}
+
+/* mouse tracker styling  */
+.tracker {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    border: 0.1rem solid rgba(222, 169, 99, 0.45);
+    border-radius: 50%;
+    transition: 200ms ease-out;
+    z-index: -2;
+    animation: 2s blink infinite linear;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.85);
+    }
+}
+
+.track-pointer {
+    width: 6px;
+    height: 6px;
+    background-color: rgb(115, 72, 14);
+    border-radius: 50%;
+    position: absolute;
+    transition: 100ms ease;
+    z-index: -1;
+}
+
+/* end mouse tracker styling  */
+
+/* main section for packages  */
+main.strength {
+    width: 95%;
+    margin: 20px auto;
+    border-bottom: 2px solid #999;
+    padding: 3rem 0 8rem;
+}
+
+main.strength>h1 {
+    text-align: center;
+    color: rgb(115, 72, 14);
+    font-family: serif;
+    font-weight: 500;
+    font-size: 4rem;
+    padding-bottom: 4rem;
+}
+
+main.strength .packages {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+main.strength .package {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3rem;
+    cursor: pointer;
+}
+
+main.strength .package h3 {
+    font-weight: 400;
+    color: #333;
+}
+
+main.strength .package .stack {
+    border: 0.08rem solid rgb(115, 72, 14);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2.5rem;
+    padding: 2.5rem 2rem;
+    border-radius: 70px;
+    position: relative;
+}
+
+main.strength .package .stack::before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 40%;
+    border-radius: 0 70px;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    transition: 0.2s 0.2s;
+}
+
+main.strength .package:hover .stack::before {
+    background-color: rgba(222, 169, 99, 0.45);
+    width: 100%;
+}
+
+main.strength .package .stack h1 {
+    font-family: serif;
+    font-weight: 500;
+    color: #222;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+main.strength .package .stack .img-cont {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+}
+
+main.strength .package .img-cont img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: grayscale(1);
+    transition: 0.2s;
+}
+
+main.strength .package:hover .img-cont img {
+    filter: grayscale(0);
+}
+
+/* main section for eduaction and experience  */
+main.education {
+    width: 95%;
+    margin: 20px auto;
+    border-bottom: 2px solid #999;
+    padding: 3rem 0 8rem;
+}
+
+main.education>h1 {
+    text-align: center;
+    color: rgb(115, 72, 14);
+    font-family: serif;
+    font-weight: 500;
+    font-size: 4rem;
+    padding-bottom: 6rem;
+}
+
+main.education .educa-exper {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+main.education .educa-exper>.education {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+main.education .educa-exper>.education h4 {
+    color: #555;
+    font-weight: 300;
+    margin-bottom: 2.5rem;
+}
+
+main.education .educa-exper>.education h1 {
+    color: #313131;
+    font-family: serif;
+    font-weight: 500;
+    padding-bottom: 0.7rem;
+    text-align: left;
+}
+
+main.education .educa-exper>.education p {
+    color: rgb(115, 72, 14);
+    font-weight: 400;
+}
+
+
+/* work section  */
+main.works {
+    width: 90%;
+    margin: 20px auto;
+    border-bottom: 2px solid #999;
+    padding: 3rem 0 8rem;
+}
+
+main.works>h1 {
+    text-align: center;
+    color: rgb(115, 72, 14);
+    font-family: serif;
+    font-weight: 500;
+    font-size: 4rem;
+    padding-bottom: 3rem;
+}
+
+main.works .swiper {
+    width: 100%;
+    height: 600px;
+
+}
+
+main.works .swiper-slide {
+    text-align: center;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+main.works .swiper-slide a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    transition: 0.3s;
+    filter: grayscale(1);
+}
+main.works .swiper-slide a:hover{
+    filter: grayscale(0);
+}
+main.works .swiper-slide a:hover .img-Holder img{
+    transform: scale(1.3);
+}
+main.works .swiper-slide a:hover h1{
+    text-decoration: underline;
+}
+main.works .swiper-slide .img-Holder {
+    height: 400px;
+    overflow: hidden;
+}
+
+main.works .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+main.works .swiper-slide h1 {
+    color: #222;
+    padding: 0 5px;
+    font-weight: 200;
+    font-size: 1.8rem;
+    font-family: serif;
+    transition: 0.3s;
+}
+main.works .swiper-slide h4{
+    color: rgb(115, 72, 14);
+    font-weight: 700;
+    letter-spacing: 0.3rem;
+
+}
+main.works .swiper-navBtn {
+    background-color: rgb(115, 72, 14, 0.6) !important;
+    color: #fff !important;
+    padding: 12px 22px !important;
+    border-radius: 50%;
+    transition: color 0.3s ease;
+}
+main.works .swiper-navBtn:hover {
+    background-color: rgb(115, 72, 14, 1) !important;
+}
+main.works .swiper-navBtn::before,
+main.works .swiper-navBtn::after {
+    font-size: 1rem !important;
+    font-weight: 700 !important;
+}
+
+main.works .swiper-button-next {
+    right: 0;
+    top: 40%;
+}
+main.works .swiper-button-prev {
+    left: 0;
+    top: 40%;
+}
+.swiper-pagination-bullet {
+    background-color: #444 !important;
+    opacity: 1;
+}
+.swiper-pagination-bullet-active {
+    background-color:rgb(115, 72, 14)  !important;
+}
+
+/* styling the testimonial section  */
+main.testimony{
+    width: 90%;
+    margin: 20px auto;
+    border-bottom: 2px solid #999;
+    padding: 7rem 0;
+}
+
+main.testimony .swiper-wrapper{
+    padding-bottom: 5rem;
+}
+main.testimony .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+main.testimony .swiper-slide h1{
+    padding: 0 2rem;
+    color: #333;
+    font-weight: 400;
+    text-align: center;
+    
+}
+main.testimony .swiper-slide h1 q{
+    font-family: serif;
+    line-height: 3rem;
+}
+main.testimony .swiper-slide div h3{
+    text-align: center;
+    color: #222;
+    padding-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+main.testimony .swiper-slide div p a{
+    color: rgb(115, 72, 14);
+}
+
+/* styling instagram images section  */
+main.testimony .instagram{
+    padding-top: 3rem;
+}
+main.testimony .instagram h1{
+    text-align: center;
+    padding: 3rem 0 3rem;
+}
+main.testimony .instagram h1 a{
+    text-decoration: none;
+    font-family: serif;
+    font-size: 2.5rem;
+    color: #333;
+    transition: 0.3s;
+}
+main.testimony .instagram h1 a:hover{
+    color: rgb(115, 72, 14);
+}
+main.testimony .instagram-img{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto;
+    gap: 1.5rem;
+}
+main.testimony .instagram-img a{
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+}
+main.testimony .instagram-img a:hover div{
+    opacity: 1;
+}
+main.testimony .instagram-img a img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+main.testimony .instagram-img a div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: rgb(115, 72, 14, 0.35);
+    opacity: 0;
+    transition: 500ms;
+}
+main.testimony .instagram-img a div i{
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 100 !important;
+}
+
+/* styling contact call section  */
+main.testimony .contact-call{
+    width: 90%;
+    margin: 10rem auto 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main.testimony .contact-call .callBruno{
+    position: relative;
+    padding: 5rem 9rem;
+    border-radius: 50%;
+    border: 0.2rem dotted #555;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+}
+main.testimony .contact-call .callBruno::before{
+    content: "";
+    position: absolute;
+    left: -30%;
+    top: 10%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(222, 169, 99, 0.1);
+    border-radius: 50%;
+    z-index: -2;
+
+}
+main.testimony .contact-call .callBruno::after{
+    content: "";
+    position: absolute;
+    right: -30%;
+    top: -10%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(222, 169, 99, 0.1);
+    border-radius: 50%;
+    z-index: -1;
+
+}
+main.testimony .contact-call .callBruno p{
+    align-self: flex-start;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: #222;
+    font-size: 0.85rem;
+    line-height: 1.3rem;
+}
+main.testimony .contact-call .callBruno a{
+    text-decoration: none;
+    color: #222;
+    font-size: 2.3rem;
+    transition: 0.4s;
+}
+main.testimony .contact-call .callBruno a:hover{
+    color: rgb(115, 72, 14);
+}
+main.testimony .contact-call .callBruno a h1{
+    font-family: serif;
+    font-weight: 600;
+}
+main.testimony .contact-call .callBruno i{
+    align-self: flex-start;
+    font-size: 4rem;
+    color: #333;
+    font-weight: 400;
+}
+/* styling button for scroll top  */
+.scroll{
+    display: none;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    padding: .7rem;
+    border-radius: 50%;
+    background-color: #444;
+    color: #fff;
+    z-index: 1200;
+    filter: drop-shadow(0px 10px 7px rgba(0 0 0 /.3));
+    cursor: pointer;
+    transition: 0.4s;
+}
+.scroll:hover{
+    background-color: rgb(115, 72, 14);
+}
+.scroll i{
+    font-size: 1.3rem;
+}
+/* footer styling  */
+footer{
+    width: 90%;
+    margin: auto;
+    padding: 3.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer p{
+    font-weight: 400;
+    color: #333;
+    font-family: serif;
+}
+footer p span{
+    font-weight: 700;
+    color: #222;
+}
+footer .socials a{
+    text-decoration: none;
+    font-size: 1.3rem;
+}
+footer .socials i {
+    color: #333;
+    margin: 0 6px;
+    transition: 0.3s;
+}
+
+footer .socials i:hover {
+    color: rgb(115, 72, 14);
+}
+
+
+/* ====== Project.html page styling  ======= */
+main.projects{
+    width: 95%;
+    margin: 1rem auto;
+    border-bottom: 2px solid #999;
+    padding: 7rem 0;
+}
+main.projects > h1{
+    padding: 0 0 3rem;
+    color: #222;
+    font-size: 5rem;
+}
+main.projects > .projects{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: 250px;
+    gap: 30px;
+}
+main.projects > .projects .short{
+    grid-row: span 1;
+}
+main.projects > .projects .tall{
+    grid-row: span 2;
+}
+main.projects > .projects > div{
+    overflow: hidden;
+    background-color: rgba(222, 169, 99, 0.1);
+    border-radius: 6px;
+    border: 8px solid rgba(222, 169, 99, 0.45);
+    box-shadow: 3px 3px 3px rgba(0 0 0 /.05);
+}
+main.projects > .projects > div >a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+main.projects > .projects > div >a:hover img{
+    transform: scale(1.2);
+}
+main.projects > .projects > div >a:hover h1{
+    text-decoration: underline;
+}
+main.projects > .projects > div img{
+    object-fit: cover;
+    transition: 0.4s;
+}
+main.projects > .projects > div a h4{
+    text-align: center;
+    color: rgb(115, 72, 14);
+    font-weight: 700;
+    letter-spacing: 0.3rem;
+    padding-top: 1rem;
+    font-size: 0.7rem;
+}
+main.projects > .projects > div a h1{
+    color: #222;
+    padding: 0 5px;
+    font-weight: 200;
+    font-size: 1.5rem;
+    font-family: serif;
+    text-align: center;
+    padding-bottom: 1rem;
+    transition: 0.3s;
+}
+main.projects > .projects .short >a .img-Holder{
+    width: 100%;
+    height: 70%;
+    overflow: hidden;
+}
+main.projects > .projects .tall >a .img-Holder{
+    width: 100%;
+    height: 85%;
+    overflow: hidden;
+}
+main.projects .more{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 8rem 0 3rem;
+}
+main.projects .more a{
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    padding: 3rem 2rem;
+    border-radius: 50%;
+    border: 0.05rem solid #555;
+    transition: 0.3s;
+}
+main.projects .more a:hover{
+    color: rgb(115, 72, 14);
+    border: 0.05rem solid rgb(115, 72, 14);
+}
+main.projects .more a h2{
+    font-weight: 200;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
+
+/* ====== contact.html page styling  ======= */
+main.contactUs{
+    width: 95%;
+    margin: 1rem auto;
+    border-bottom: 2px solid #999;
+    padding: 7rem 0;
+}
+main.contactUs > h1{
+    padding: 0 0 3rem;
+    color: #222;
+    font-size: 5rem;
+}
+main.contactUs .address-form{
+    margin-top: 4rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3.5rem;
+}
+main.contactUs .address-form .address{
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+main.contactUs .address-form .address div h4{
+    color: #777;
+    font-weight: 400;
+    padding-bottom: 1rem;
+    text-transform: uppercase;
+}
+main.contactUs .address-form .address div p{
+    color: #222;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+main.contactUs .address-form .address div p a{
+    color: #222;
+    text-decoration: none;
+    transition: 0.3s;
+}
+main.contactUs .address-form .address div a:hover{
+    color: rgb(115, 72, 14);
+    text-decoration: underline;
+}
+main.contactUs .address-form .form-section > h4{
+    color: #777;
+    font-weight: 400;
+    padding-bottom: 3.5rem;
+    text-transform: uppercase;
+}
+main.contactUs .address-form .form-section form{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+main.contactUs .address-form .form-section form div{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+main.contactUs .address-form .form-section form div label{
+    color: #222;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+main.contactUs .address-form .form-section form div input{
+    outline: none;
+    border: none;
+    height: 55px;
+    font-size: 3rem;
+    border-bottom: 0.08rem solid #999;
+    transition: 200ms;
+    background-color: transparent;
+}
+main.contactUs .address-form .form-section form div textarea{
+    outline: none;
+    border: none;
+    font-size: 1.5rem;
+    border-bottom: 0.08rem solid #999;
+    transition: 200ms;
+    background-color: transparent;
+    resize: vertical;
+}
+main.contactUs .address-form .form-section form div input:focus,
+main.contactUs .address-form .form-section form div textarea:focus{
+    border-bottom: 0.1rem solid #222;
+}
+
+main.contactUs .address-form .form-section form button{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3.5rem;
+    font-weight: 700;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin-top: 3rem;
+    gap: 0.5rem;
+    color: #222;
+    transition: 0.4s;
+}
+main.contactUs .address-form .form-section form button:hover{
+    color: rgb(115, 72, 14);
+    gap: 1rem;
+}
+
+
+/* Tablet view  */
+@media screen and (max-width: 850px) and (min-width: 701px) {
+
+    /* ===== media query for index.html page ===== */
+
+    header nav{
+        width: 92%;
+    }
+    main.info {
+        width: 90%;
+    }
+
+    aside.edu,
+    aside.data {
+        grid-column: span 3;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+    }
+
+    aside.edu div {
+        width: calc(100% / 4);
+    }
+
+    aside.data div {
+        width: calc(100% / 5);
+    }
+
+    aside.data div h1,
+    aside.data div h3 {
+        text-align: center;
+    }
+
+    .center {
+        grid-column: span 3;
+        width: 500px;
+        margin: 0 auto 20px;
+    }
+
+    main.strength .packages {
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 3rem;
+    }
+
+    main.strength .package {
+        gap: 1.5rem;
+    }
+
+    main.strength>h1,
+    main.education h1,
+    main.works > h1{
+        font-size: 2.5rem;
+        padding-bottom: 4rem;
+    }
+
+    main.education .educa-exper {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    main.education .educa-exper>.education h1 {
+        font-size: 2rem;
+    }
+    main.testimony .instagram-img{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    main.testimony .instagram h1 a{
+        font-size: 2rem;
+    }
+    main.testimony .contact-call .callBruno a{
+        font-size: 2rem;
+    }
+    main.testimony .contact-call .callBruno i{
+        font-size: 3rem;
+    }
+    footer{
+        padding: 1rem 0 3rem;
+    }
+
+    /* ===== media query for project.html page ===== */
+    main.projects > h1{
+        font-size: 3rem;
+    }
+    main.projects > .projects{
+        grid-template-columns: 1fr 1fr;
+    }
+    /* ===== media query for contact.html page ===== */
+    main.contactUs >h1{
+        font-size: 3rem;
+    }
+    main.contactUs .address-form .form-section form button{
+        font-size: 2.5rem;
+    }
+    main.contactUs .address-form{
+    grid-template-columns: 1.3fr 2fr;
+    gap: 2rem;
+    }
+    main.contactUs .address-form .form-section form div input{
+        font-size: 1.5rem;
+    }
+}
+
+
+/* Phone view  */
+@media screen and (max-width: 700px) {
+
+    /* ===== media query for index.html page ===== */
+
+    main.info {
+        width: 90%;
+    }
+
+    .center {
+        grid-column: span 3;
+        width: 350px;
+        margin: 0 auto 20px;
+        grid-row: 2;
+    }
+
+    header nav {
+        width: 100%;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+
+    header nav a:first-child{
+        grid-column: span 2;
+    }
+    header nav a:nth-child(2){
+        grid-column: span 2;
+    }
+    nav .logo {
+        grid-column: span 4;
+        grid-row: 1;
+        margin-bottom: 10px;
+    }
+
+    nav>.icons {
+        justify-self: center;
+        grid-column: span 4;
+        margin-top: 10px;
+    }
+    nav>.icons i{
+        margin: 0 1rem;
+    }
+
+    aside.edu,
+    aside.data {
+        grid-column: span 3;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+    }
+
+    aside.edu,
+    aside.data {
+        width: 100%;
+    }
+
+    aside.edu div {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    aside.data div {
+        width: calc(100% / 2);
+        margin-bottom: 20px;
+    }
+
+    aside.edu div h3 {
+        text-align: center;
+        margin: 10px;
+        color: #111;
+    }
+
+    aside.edu div p {
+        text-align: center;
+    }
+
+    aside.data div h1,
+    aside.data div h3 {
+        text-align: center;
+    }
+
+    main.info,
+    main.strength,
+    main.education {
+        padding-bottom: 3rem;
+    }
+
+    main.info .name h1 {
+        font-size: 2rem;
+    }
+
+    main.info .name {
+        padding: 40px 0;
+    }
+
+    main.strength .packages {
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 2rem;
+    }
+
+    main.strength .package {
+        gap: 1.3rem;
+    }
+
+    main.strength>h1,
+    main.education>h1 {
+        font-size: 2.3rem;
+        padding-bottom: 4rem;
+    }
+    main.works > h1 {
+        font-size: 2.3rem;
+        padding-bottom: 1.7rem;
+    }
+
+    main.education .educa-exper {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2rem;
+    }
+
+    main.education .educa-exper>.education h4 {
+        margin-bottom: 0.7rem;
+    }
+
+    main.education .educa-exper>.education h1 {
+        font-size: 1.8rem;
+    }
+
+    main.education .educa-exper>.education h1,
+    main.education .educa-exper>.education p {
+        text-align: justify;
+    }
+
+    main.education .educa-exper>.education .details {
+        margin-left: 2rem;
+    }
+    main.testimony{
+        padding: 4rem 0;
+    }
+    main.testimony .swiper-slide {
+        gap: 3rem;
+    }
+    main.testimony .swiper-slide h1{
+        font-size: 1.5rem;
+        
+    }
+    main.testimony .instagram-img{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.7rem;
+    }
+    main.testimony .instagram h1 a{
+        font-size: 2rem;
+    }
+    main.testimony .instagram-img a img{
+        height: 150px;
+    }
+    main.testimony .contact-call{
+        margin: 8rem auto 3rem;
+    }
+    main.testimony .contact-call .callBruno{
+        padding: 3rem 6rem;
+        gap: 0.5rem;
+    }
+    main.testimony .contact-call .callBruno p{
+        font-size: 0.75rem;
+    }
+    main.testimony .contact-call .callBruno a{
+        font-size: 1.5rem;
+    }
+    main.testimony .contact-call .callBruno i{
+        font-size: 2rem;
+    }
+    footer{
+        padding: 1rem 0 3rem;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1.5rem;
+    }
+    /* ===== media query for project.html page ===== */
+    main.projects > h1{
+        font-size: 2.3rem;
+    }
+    main.projects > .projects{
+        grid-template-columns: 1fr;
+    }
+    main.projects .more{
+        margin: 6rem 0 0rem;
+    }
+    main.projects .more a{
+        padding: 2rem 1rem;
+    }
+    main.projects .more a h2{
+        font-size: 1rem;
+    }
+    /* ===== media query for contact.html page ===== */
+    main.contactUs{
+        width: 88%;
+    }
+    main.contactUs >h1{
+        font-size: 2.3rem;
+    }
+    main.contactUs .address-form .form-section form button{
+        font-size: 2rem;
+    }
+    main.contactUs .address-form{
+    grid-template-columns: 1fr;
+    margin-top: 0rem;
+    gap: 4rem;
+    }
+    main.contactUs .address-form .form-section form div input{
+        font-size: 1.5rem;
+    }
+    main.contactUs .address-form .address{
+        gap: 1.5rem;
+    }
+    main.contactUs .address-form .form-section > h4{
+        padding-bottom: 1.5rem;
+    }
+    main.contactUs .address-form .form-section form{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    main.contactUs .address-form .form-section form div{
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+}
